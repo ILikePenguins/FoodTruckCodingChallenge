@@ -3,13 +3,16 @@ package user;
 import java.util.Timer;
 import java.util.TimerTask;
 import android.content.Context;
-import android.content.Intent;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.os.Handler;
-import android.provider.Settings;
+
+/* class that keeps track of user location
+ * if available, last known location is obtained
+ * otherwise, if network or gps services are available, obtain user location
+ * if theyre not available return null
+ */
 
 public class MyLocation 
 {
@@ -95,7 +98,7 @@ public class MyLocation
                      locationResult.gotLocation(net_loc);
                  return;
              }
-
+             //ensure that the locations are not null
              if(gps_loc!=null){
                  locationResult.gotLocation(gps_loc);
                  return;

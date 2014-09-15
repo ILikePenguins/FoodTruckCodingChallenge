@@ -21,6 +21,11 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
+/*class that gets directions from user location to food truck location using google maps
+ * displays blue lines to show path\
+ * displays blue markers if step by step directions are requested
+ */ 
+
 public class Directions 
 {
 	private MapActivity activity;

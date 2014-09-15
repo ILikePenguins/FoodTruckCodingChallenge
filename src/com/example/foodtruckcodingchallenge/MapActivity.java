@@ -21,6 +21,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+//class that shows google maps
 public class MapActivity extends FragmentActivity  
 {
 	private GoogleMap map; 
@@ -104,6 +105,7 @@ public class ItemSelectedListener implements OnItemSelectedListener
 
 	public void markTruck()
 	{
+		//obtain the information on the selected food truck
 		String name = getIntent().getExtras().getString("name");
 		String address = getIntent().getExtras().getString("address");
 		double lat= getIntent().getExtras().getDouble("lat");
@@ -114,6 +116,7 @@ public class ItemSelectedListener implements OnItemSelectedListener
 		double userLng =getIntent().getExtras().getDouble("userLng");
 		userLocation = new LatLng(userLat,userLng);
 		
+		//make marker for the food truck using truck icon
 		MarkerOptions marker=new MarkerOptions()
 		 .position(truckCoords)
 		 .title(name +address);

@@ -17,7 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
-
+//class that shows list view and allows selection of a food truck
 public class ListActivity  extends Activity
 {
 
